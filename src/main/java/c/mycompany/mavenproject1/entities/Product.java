@@ -1,6 +1,7 @@
 
 package c.mycompany.mavenproject1.entities;
 
+import java.util.Locale.Category;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,9 +23,9 @@ public class Product {
     private String pDiscount;
     private String pQuantity;
     @ManyToOne
-    private Category category;
+    private Mycategory category;
 
-    public Product(int pId, String pTitle, String pDescription, String pPhoto, String Pprice, String pDiscount, String pQuantity, Category category) {
+    public Product(int pId, String pTitle, String pDescription, String pPhoto, String Pprice, String pDiscount, String pQuantity, Mycategory category) {
         this.pId = pId;
         this.pTitle = pTitle;
         this.pDescription = pDescription;
@@ -103,11 +104,11 @@ public class Product {
         this.pQuantity = pQuantity;
     }
 
-    public Category getCategory() {
+    public Mycategory getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(Mycategory category) {
         this.category = category;
     }
 

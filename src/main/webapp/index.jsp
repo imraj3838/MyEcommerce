@@ -13,6 +13,8 @@
         <title>Page</title>
     </head>
     <body>
+        <%@include file="common_css_js/navbar.jsp" %>
+        <br>
         <h1>Hello World!</h1>
         <h1>i am priyanshu raj</h1>
         <%
