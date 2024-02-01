@@ -12,7 +12,7 @@
         <title>Register Page</title>
         <%@include file="common_css_js/commonfile.jsp" %>
     </head>
-    <body>
+    <body style="background-color: yellowgreen">
         <%@include file="common_css_js/navbar.jsp" %>
         
         <div class="row">
@@ -20,7 +20,9 @@
                 <i class="fa-solid fa-user-plus"></i>
                 
             <h2 class = "text-center my-3">Sign Up here</h2>
-            <div class="col-md-4 offset-md-4">
+            
+            <div class="col-md-4 offset-md-4" style="border: 2px solid black; box-shadow: 2px 4px 2px 4px red; background-color: lightskyblue; padding: 10px" >
+                 <%@include file = "common_css_js/message.jsp" %>
                  <form action="registerservlett" method="post">
   <div class="mb-3">
      

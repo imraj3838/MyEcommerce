@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -49,8 +50,13 @@ public class registerservlett extends HttpServlet {
             tx.commit();
             hibernateSession.close();
             
-            out.print("successfully saved data");
-            out.print("<br>user id is"+userId);
+//            out.print("successfully saved data");
+//            out.print("<br>user id is"+userId);
+HttpSession httpsession = request.getSession();
+httpsession.setAttribute("message", "Registration successful "+userId);
+response.sendRedirect("register.jsp");
+return;
+
          } catch(Exception e) {
              e.printStackTrace();
          }
