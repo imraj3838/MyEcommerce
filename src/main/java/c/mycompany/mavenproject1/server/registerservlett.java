@@ -39,7 +39,7 @@ public class registerservlett extends HttpServlet {
                 out.print("<h1>Please Enter your name</h1>");
             }
             
-            User user = new User(UserName, UserEmail, UserPassword, UserPhone, "default.png", UserAddress);
+            User user = new User(UserName, UserEmail, UserPassword, UserPhone, "default.png", UserAddress,"normal");
             
             Session hibernateSession = factoryProvider.getFactory().openSession();
             

@@ -1,3 +1,11 @@
+
+
+<%@page import="c.mycompany.mavenproject1.entities.User"%>
+<%
+    User user1 = (User)session.getAttribute("current-user");
+%>
+
+
 <nav class="bg-primary" data-bs-theme="dark">
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -26,12 +34,35 @@
         </li>
       </ul>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <%
+        if(user1==null){
+           %> 
             <li class="nav-item">
           <a class="nav-link active"  href="login.jsp">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active"  href="register.jsp">Register</a>
         </li>
+            
+            
+         <%   
+        }else{
+        %>
+     <li class="nav-item">
+         <a class="nav-link active"  href="#"><h4 style="margin-right: 10px;color: yellow;font-family: sans-serif"> <%=  user1.getUserName()   %></h4></a>
+        </li>
+         <li class="nav-item">
+         <a class="nav-link active"  href="logoutservlett"><h4>Logout</h4></a>
+        </li>
+      
+        <%
+}  
+          
+          
+          %>
+            
+            
+           
         </ul>
       
     </div>
