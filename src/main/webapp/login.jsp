@@ -36,9 +36,9 @@
   </div>
                         </div>
                         <div class="text-center"><a style="text-decoration: none;color: black; margin-bottom: 10px" href="register.jsp"><h4>Not register ? Click Me</h4></a></div>
-                        <div class="card-footer" >
-                            <h4 style="text-align: center"><button style="border-radius: 5px; border: 2px solid black;" class="submit" type="submit" name="submit" >Submit</button></h4>
-                            <h4 style="text-align: center"><button style="border-radius: 5px; border: 2px solid black;" class="reset" name="reset" type="reset" >Reset</button></h4>
+                        <div style="justify-content: space-around;display:flex" class="card-footer" >
+                            <h4 style="text-align: center"><button style="border-radius: 4px; border: none;background-color: whitesmoke;border: 1px solid black;font-weight: 400;padding: 5px"  class="submit" type="submit" name="submit" >Submit</button></h4>
+                            <h4 style="text-align: center"><button style="border-radius: 4px;border: none;background-color: whitesmoke;border: 1px solid black;font-weight: 400;padding: 5px" class="reset" name="reset" type="reset" >Reset</button></h4>
                         </div>
                     </form>
                     </div>

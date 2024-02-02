@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2 Feb, 2024, 8:55:27 PM
+    Author     : rajpr
+*/
+
+body{
+    background-color: lightblue;
+}
+.admin .card:hover{
+    border: 2px black;
+    background-color: #DFFF00;
+    color: black;
+}
