@@ -24,7 +24,7 @@ if(user==null){
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin page</title>
         <%@include file="common_css_js/commonfile.jsp" %>
-        <link rel="stylesheet" href="css/newcss.css">
+       
         
     </head>
     <body>
@@ -67,23 +67,23 @@ if(user==null){
             </div>  
             <div class="row mt-2">
                 <div class="col-6"> 
-                    <div style="padding: 10px;box-shadow: 2px 4px 4px 2px black" class="card">
+                    <div style="padding: 10px;box-shadow: 2px 4px 4px 2px black" class="card" data-toggle="modal" data-target="#addCategoryModel">
                         <div class="card-body text-center">
                            <div class="container">
                                <img style="max-width: 150px; padding: 5px" class="img-fluid" src="images/add-to-basket.png" alt="user_image">
                             </div>
                            
-                            <h1> Add Products</h1>
+                            <h1> Add category</h1>
                         </div>       
                     </div>
                 </div>
                 <div class="col-6">
-                    <div style="padding: 10px;box-shadow: 2px 4px 4px 2px black" class="card">
+                    <div style="padding: 10px;box-shadow: 2px 4px 4px 2px black" class="card" data-toggle="modal" data-target="#addProductModel">
                         <div class="card-body text-center">
                            <div class="container">
                                <img style="max-width: 150px; padding: 5px" class="img-fluid" src="images/apps.png" alt="user_image">
                             </div>
-                            <h1>Add Category</h1>
+                            <h1>Add Product</h1>
                         </div>       
                     </div>
                 </div>
@@ -92,5 +92,91 @@ if(user==null){
             
             
         </div>
+
+
+<!-- Modal -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="addProductModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          
+           <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Title description</label>
+    <textarea class="container" rows="5" cols="2"> 
+    </textarea>
+  </div>
+               <div class="form-group">
+    <label for="exampleInputEmail1">photo</label>
+    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+  </div>
+               <div class="form-group">
+    <label for="exampleInputEmail1">Price</label>
+    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+  </div>
+               <div class="form-group">
+    <label for="exampleInputEmail1">Discount</label>
+    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+  </div>
+               <div class="form-group">
+    <label for="exampleInputEmail1">Quantity</label>
+    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</form>
+                </div>
+      
+    </div>
+  </div>
+</div>
+
+   <!--add category model-->
+   <div class="modal fade" id="addCategoryModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Title description</label>
+    <textarea class="container" rows="10" cols="5"> 
+    </textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     </body>
 </html>
