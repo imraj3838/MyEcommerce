@@ -1,8 +1,10 @@
 C:\Users\rajpr\Documents\NetBeansProjects\mavenproject1\src\main\java\c\mycompany\mavenproject1\helper\factoryProvider.java
 C:\Users\rajpr\Documents\NetBeansProjects\mavenproject1\src\main\java\c\mycompany\mavenproject1\server\loginServlett.java
 C:\Users\rajpr\Documents\NetBeansProjects\mavenproject1\src\main\java\c\mycompany\mavenproject1\server\registerservlett.java
+C:\Users\rajpr\Documents\NetBeansProjects\mavenproject1\src\main\java\c\mycompany\mavenproject1\server\addCategoryServlet.java
 C:\Users\rajpr\Documents\NetBeansProjects\mavenproject1\src\main\java\c\mycompany\mavenproject1\entities\Product.java
 C:\Users\rajpr\Documents\NetBeansProjects\mavenproject1\src\main\java\c\mycompany\mavenproject1\entities\User.java
 C:\Users\rajpr\Documents\NetBeansProjects\mavenproject1\src\main\java\c\mycompany\mavenproject1\server\logoutservlett.java
 C:\Users\rajpr\Documents\NetBeansProjects\mavenproject1\src\main\java\c\mycompany\mavenproject1\dao\UserDao.java
 C:\Users\rajpr\Documents\NetBeansProjects\mavenproject1\src\main\java\c\mycompany\mavenproject1\entities\Mycategory.java
+C:\Users\rajpr\Documents\NetBeansProjects\mavenproject1\src\main\java\c\mycompany\mavenproject1\dao\CategoryDao.java

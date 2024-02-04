@@ -30,6 +30,17 @@ if(user==null){
     <body>
         <%@include file="common_css_js/navbar.jsp" %>
         <div class="container admin">
+           
+            <div class="container-fluid mt-2" >
+                
+                <%@include file="common_css_js/message.jsp" %>
+            </div>
+            
+            
+            
+            
+            
+            
             <div class="row mt-4 ">
                 <div class="col-4 "> 
                     <div style="background-color: #C4A484;color: white" class="card text-center">
@@ -156,14 +167,14 @@ if(user==null){
         </button>
       </div>
       <div class="modal-body">
-        <form>
+          <form action="addCategoryServlet" method="post">
   <div class="form-group">
     <label for="exampleInputEmail1">Title</label>
-    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+    <input type="text" name="ctitle" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Title description</label>
-    <textarea class="container" rows="10" cols="5"> 
+    <textarea class="container" name="cdescription" rows="10" cols="5"> 
     </textarea>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -171,10 +182,7 @@ if(user==null){
 </form>
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      
     </div>
   </div>
 </div>

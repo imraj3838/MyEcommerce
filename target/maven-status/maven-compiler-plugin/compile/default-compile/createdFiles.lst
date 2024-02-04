@@ -1,8 +1,10 @@
 c\mycompany\mavenproject1\entities\Mycategory.class
 c\mycompany\mavenproject1\helper\factoryProvider.class
+c\mycompany\mavenproject1\dao\CategoryDao.class
 c\mycompany\mavenproject1\server\registerservlett.class
 c\mycompany\mavenproject1\entities\Product.class
 c\mycompany\mavenproject1\entities\User.class
 c\mycompany\mavenproject1\server\logoutservlett.class
+c\mycompany\mavenproject1\server\addCategoryServlet.class
 c\mycompany\mavenproject1\dao\UserDao.class
 c\mycompany\mavenproject1\server\loginServlett.class
