@@ -1,4 +1,8 @@
-<%@page import="c.mycompany.mavenproject1.entities.User" %>
+<%@page import="c.mycompany.mavenproject1.helper.factoryProvider"%>
+<%@page import="c.mycompany.mavenproject1.entities.*" %>
+<%@page import="c.mycompany.mavenproject1.dao.CategoryDao" %>
+<%@page import="c.mycompany.mavenproject1.*" %>
+<%@page import="java.util.*" %>
 <%
     User user = (User)session.getAttribute("current-user");
 
@@ -124,29 +128,53 @@ if(user==null){
            <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Title</label>
-    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+    <input type="text" name="pTitle" placeholder="Enter title" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Title description</label>
-    <textarea class="container" rows="5" cols="2"> 
+    <textarea class="container" placeholder="Enter description" name="pDescription" rows="5" cols="2"> 
     </textarea>
   </div>
-               <div class="form-group">
-    <label for="exampleInputEmail1">photo</label>
-    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
-  </div>
+               
                <div class="form-group">
     <label for="exampleInputEmail1">Price</label>
-    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+    <input type="number" placeholder="Enter price" class="form-control" name="pPrice" id="exampleInputTitle" aria-describedby="emailHelp">
   </div>
                <div class="form-group">
     <label for="exampleInputEmail1">Discount</label>
-    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+    <input type="number" placeholder="Enter Discount" class="form-control" name="pDiscount" id="exampleInputTitle" aria-describedby="emailHelp">
   </div>
                <div class="form-group">
     <label for="exampleInputEmail1">Quantity</label>
-    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+    <input type="number" class="form-control" id="exampleInputTitle" name="PQuantity" placeholder="Enter Quantty" aria-describedby="emailHelp">
   </div>
+               
+               <%
+                   CategoryDao ct = new CategoryDao(factoryProvider.getFactory());
+                   List<Mycategory> list = ct.getCategories();
+               %>
+                <div class="form-group">
+                    <select name="catId" class="form-control" id="id">
+                        <%
+                        for(Mycategory cc : list){
+                       %> 
+
+                       <option value="<%=cc.getcId()%>"><%=cc.getcTitle()%></option>  
+
+
+            <%
+                }
+                        %>
+                          
+                    </select>
+
+               <div class="form-group">
+    <label for="exampleInputEmail1">photo</label>
+    <input type="file" name="pPhoto" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp">
+  </div>
+                 </div>
+               
+         
   <button type="submit" class="btn btn-primary">Submit</button>
    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 </form>

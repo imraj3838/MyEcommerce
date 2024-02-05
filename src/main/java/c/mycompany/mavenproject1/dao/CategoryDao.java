@@ -6,6 +6,8 @@
 package c.mycompany.mavenproject1.dao;
 
 import c.mycompany.mavenproject1.entities.Mycategory;
+import java.util.List;
+import javax.persistence.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -34,6 +36,13 @@ public class CategoryDao {
            e.printStackTrace();
         }
      return temp;  
+    }
+    
+    public List<Mycategory> getCategories(){
+        Session s = this.factory.openSession();
+       Query query =  s.createQuery("from Mycategory");
+        List<Mycategory> lst = query.getResultList();
+        return lst;
     }
     
     
